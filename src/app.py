@@ -23,7 +23,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 # Authentication Config
-app.config["JWT_SECRET_KEY"] = "nikhil-fs-pt-15"
+app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET")
 jwt = JWTManager(app)
 
 
